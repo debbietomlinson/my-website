@@ -101,12 +101,36 @@
                     </ul>
                 </div>
                 <div class="contact-form-container">
-                    <form class="contact-form">
-                        <div class="form-group"><label>Name</label><input type="text" placeholder="Your Name" required></div>
-                        <div class="form-group"><label>Email</label><input type="email" placeholder="Email Address" required></div>
-                        <div class="form-group"><label>Message</label><textarea rows="4" placeholder="How can we help?"></textarea></div>
-                        <button type="submit" class="btn-submit">Send Message</button>
-                    </form>
+                   <form class="contact-form" action="https://formspree.io/f/your-unique-id" method="POST">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+
+    <div class="form-group">
+        <label>Service Required</label>
+        <select name="service" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; background: white;">
+            <option value="General Enquiry">General Enquiry</option>
+            <option value="Diary Management">Diary & Lead Management</option>
+            <option value="Call Handling">Call Handling</option>
+            <option value="Financial Support">Financial Support (Bookkeeping/VAT)</option>
+            <option value="Transcription">Transcription (Legal/Medical)</option>
+            <option value="E-commerce Support">E-commerce Support</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" rows="4" placeholder="How can we help?"></textarea>
+    </div>
+    
+    <button type="submit" class="btn-submit">Send Message</button>
+</form>
                 </div>
             </div>
         </div>
@@ -124,4 +148,5 @@
 </footer>
 
 </body>
+
 </html>
