@@ -4,7 +4,9 @@ body { font-family: 'Inter', sans-serif; margin: 0; color: var(--slate-grey); li
 
 .navbar { padding: 10px 0; background: #fff; border-bottom: 3px solid var(--royal-purple); position: sticky; top: 0; z-index: 1000; }
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-.logo img { height: 70px; width: auto; }
+.logo img { height: 80px; /* This makes it significantly larger and more visible */ width: auto; display: block; padding: 10px 0; /* Adds space so it doesn't touch the top/bottom edges */
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.1)); /* Adds a professional "pop" */  transition: transform 0.3s ease; /* Makes it feel high-end when hovered */ }
+.logo img:hover { transform: scale(1.03); /* A tiny, elegant growth when a mouse moves over it */ }
 nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
 nav a { text-decoration: none; color: var(--primary-navy); font-weight: 600; }
 .btn-nav { background: var(--primary-navy); color: #fff !important; padding: 8px 15px; border-radius: 5px; }
@@ -38,3 +40,4 @@ footer { background: var(--primary-navy); color: #fff; padding: 30px 0; text-ali
 
 
 @media (max-width: 768px) { .service-grid, .testimonial-grid, .contact-grid, .ecommerce-list { grid-template-columns: 1fr; } .ecommerce-featured { grid-column: span 1; } }
+
